@@ -28,5 +28,6 @@ from pytermcolors import colorize, PyTermColors as s
 print(colorize("Hello World!", fg=s.FG_CYAN, bg=s.BG_BLACK, bold=True, italic=True))
 print(colorize("Warning!", fg=s.FG_YELLOW, bold=True, underline=True))
 print(colorize("Error!", fg=s.FG_RED, strike=True))
+```
 
 ![example](res/example.png)
