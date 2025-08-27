@@ -7,7 +7,7 @@ class PyTermColors:
     DIM: str           = '\033[2m'
     ITALIC: str        = '\033[3m'         # !!! May not work everywhere !!!
     UNDERLINE: str     = '\033[4m'
-    BLINK: str         = '\033[5m'          # !!! May not work everywhere !!!
+    BLINK: str         = '\033[5m'         # !!! May not work everywhere !!!
     INVERT: str        = '\033[7m'
     STRIKETHROUGH: str = '\033[9m'
     HIDDEN: str        = '\033[8m'
