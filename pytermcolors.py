@@ -1,4 +1,4 @@
-class PyTermColors:
+class Color:
     # Reset all styles
     RESET: str = '\033[0m'
 
@@ -51,20 +51,20 @@ class PyTermColors:
     BG_BRIGHT_MAGENTA: str = '\033[105m'
     BG_BRIGHT_CYAN: str    = '\033[106m'
     BG_BRIGHT_WHITE: str   = '\033[107m'
-    
+
 
 def colorize(
     text: str,
-    fg: str = "",
-    bg: str = "",
-    bold: bool = False,
-    dim: bool = False,
-    italic: bool = False,
+    fg: str         = "",
+    bg: str         = "",
+    bold: bool      = False,
+    dim: bool       = False,
+    italic: bool    = False,
     underline: bool = False,
-    blink: bool = False,
-    invert: bool = False,
-    strike: bool = False,
-    hidden: bool = False
+    blink: bool     = False,
+    invert: bool    = False,
+    strike: bool    = False,
+    hidden: bool    = False
 ) -> str:
     """
     Parameters:
@@ -82,19 +82,19 @@ def colorize(
     Returns:
         str: Styled string ready to print
     """
-    
+
     styles = []
 
-    if bold: styles.append(PyTermColors.BOLD)
-    if dim: styles.append(PyTermColors.DIM)
-    if italic: styles.append(PyTermColors.ITALIC)
-    if underline: styles.append(PyTermColors.UNDERLINE)
-    if strike: styles.append(PyTermColors.STRIKETHROUGH)
-    if invert: styles.append(PyTermColors.INVERT)
-    if blink: styles.append(PyTermColors.BLINK)
-    if hidden: styles.append(PyTermColors.HIDDEN)
+    if bold:      styles.append(Color.BOLD)
+    if dim:       styles.append(Color.DIM)
+    if italic:    styles.append(Color.ITALIC)
+    if underline: styles.append(Color.UNDERLINE)
+    if strike:    styles.append(Color.STRIKETHROUGH)
+    if invert:    styles.append(Color.INVERT)
+    if blink:     styles.append(Color.BLINK)
+    if hidden:    styles.append(Color.HIDDEN)
 
-    if fg: styles.append(fg)
-    if bg: styles.append(bg)
+    if fg:        styles.append(fg)
+    if bg:        styles.append(bg)
 
-    return f"{''.join(styles)}{text}{PyTermColors.RESET}"
+    return f"{''.join(styles)}{text}{Color.RESET}"
