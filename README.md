@@ -8,7 +8,7 @@ Just copy `pytermcolors.py` into your project folder
 
 ---
 
-## Usage
+## Example
 
 ```python
 from pytermcolors import colorize, Color
