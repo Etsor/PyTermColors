@@ -4,7 +4,9 @@ Simple Python class with ANSI escape codes for styling and coloring terminal out
 
 ## Installation
 
-Just copy `pytermcolors.py` into your project folder
+```sh
+pip3 install pytermcolors
+```
 
 ---
 
