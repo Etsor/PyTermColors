@@ -53,6 +53,50 @@ class Color:
     BG_BRIGHT_WHITE: str   = '\033[107m'
 
 
+def colprint(
+    text: str,
+    fg: str         = "",
+    bg: str         = "",
+    bold: bool      = False,
+    dim: bool       = False,
+    italic: bool    = False,
+    underline: bool = False,
+    blink: bool     = False,
+    invert: bool    = False,
+    strike: bool    = False,
+    hidden: bool    = False
+) -> None:
+    """
+    Parameters:
+        text (str): Text to print
+        fg (str): Foreground color
+        bg (str): Background color
+        bold (bool): Bold
+        underline (bool): Underlined
+        italic (bool): Italic
+        strike (bool): Strikethrough
+        invert (bool): Inverted colors
+        dim (bool): Dim
+        hidden (bool): Hidden
+    """
+
+    styles = []
+
+    if bold:      styles.append(Color.BOLD)
+    if dim:       styles.append(Color.DIM)
+    if italic:    styles.append(Color.ITALIC)
+    if underline: styles.append(Color.UNDERLINE)
+    if strike:    styles.append(Color.STRIKETHROUGH)
+    if invert:    styles.append(Color.INVERT)
+    if blink:     styles.append(Color.BLINK)
+    if hidden:    styles.append(Color.HIDDEN)
+
+    if fg:        styles.append(fg)
+    if bg:        styles.append(bg)
+
+    print(f"{''.join(styles)}{text}{Color.RESET}")
+
+
 def colorize(
     text: str,
     fg: str         = "",

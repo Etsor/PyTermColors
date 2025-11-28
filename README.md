@@ -10,14 +10,19 @@ pip3 install pytermcolors
 
 ---
 
-## Example
+## Examples
+
+```python
+from pytermcolors import colprint, Color
+
+colprint("Hello World!", fg=Color.FG_CYAN, bg=Color.BG_WHITE, bold=True, italic=True)
+```
 
 ```python
 from pytermcolors import colorize, Color
 
-print(colorize("Hello World!", fg=Color.FG_CYAN, bg=Color.BG_WHITE, bold=True, italic=True))
-print(colorize("Warning!", fg=Color.FG_YELLOW, bold=True, underline=True))
-print(colorize("Error!", fg=Color.FG_RED, strike=True))
+print(colorize("WARNING", fg=Color.FG_YELLOW, underline=True))
+print(colorize("ERROR", fg=Color.FG_RED, strike=True))
 ```
 
 ![example](res/example.png)
